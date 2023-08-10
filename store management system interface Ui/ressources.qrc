@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>menu.svg</file>
+    <file>notif1.svg</file>
+    <file>bar-chart-2.svg</file>
+    <file>bell.svg</file>
+    <file>chrome.svg</file>
+    <file>commandAchat.svg</file>
+    <file>contact.svg</file>
+    <file>exit.svg</file>
+    <file>factory.svg</file>
+    <file>layers.svg</file>
+    <file>package.svg</file>
+    <file>promo.svg</file>
+    <file>search.svg</file>
+    <file>task.svg</file>
+    <file>trending-up.svg</file>
+    <file>user.svg</file>
+    <file>users.svg</file>
+  </qresource>
+</RCC>
