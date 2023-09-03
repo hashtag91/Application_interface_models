@@ -69,6 +69,18 @@ class Ui_MainWindow(object):
 "#signupBtn:hover{\n"
 "    color : blue;\n"
 "}")
+        shadow = QtWidgets.QGraphicsDropShadowEffect()
+        shadow.setColor(QtGui.QColor(QtCore.Qt.GlobalColor.black))
+        shadow.setBlurRadius(15)
+        shadow.setOffset(5,5)
+        shadow1 = QtWidgets.QGraphicsDropShadowEffect()
+        shadow1.setColor(QtGui.QColor(QtCore.Qt.GlobalColor.black))
+        shadow1.setBlurRadius(15)
+        shadow1.setOffset(5,5)
+        shadow2 = QtWidgets.QGraphicsDropShadowEffect()
+        shadow2.setColor(QtGui.QColor(QtCore.Qt.GlobalColor.black))
+        shadow2.setBlurRadius(10)
+        shadow2.setOffset(3,3)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -76,6 +88,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.LeftFrame = QtWidgets.QFrame(self.centralwidget)
+        self.LeftFrame.setGraphicsEffect(shadow)
         font = QtGui.QFont()
         font.setPointSize(8)
         self.LeftFrame.setFont(font)
@@ -146,6 +159,7 @@ class Ui_MainWindow(object):
         spacerItem2 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem2)
         self.submit = QtWidgets.QPushButton(self.LeftFrame)
+        self.submit.setGraphicsEffect(shadow2)
         self.submit.setMinimumSize(QtCore.QSize(0, 40))
         font = QtGui.QFont()
         font.setPointSize(10)
@@ -180,6 +194,7 @@ class Ui_MainWindow(object):
         self.signupBtn.setFont(font)
         self.signupBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.signupBtn.setObjectName("signupBtn")
+        self.signupBtn.clicked.connect(self.signupAction)
         self.horizontalLayout_5.addWidget(self.signupBtn)
         self.horizontalLayout_5.setStretch(0, 1)
         self.verticalLayout.addLayout(self.horizontalLayout_5)
@@ -192,6 +207,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.setStretch(8, 1)
         self.horizontalLayout.addWidget(self.LeftFrame)
         self.RightFrame = QtWidgets.QFrame(self.centralwidget)
+        self.RightFrame.setGraphicsEffect(shadow1)
         self.RightFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.RightFrame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.RightFrame.setObjectName("RightFrame")
@@ -246,6 +262,8 @@ class Ui_MainWindow(object):
             else:
                 print(self.usernameLine.text())
                 print(self.passwordLine.text())
+    def signupAction(self):
+        print("Your signup page in this function")
 
 
 if __name__ == "__main__":
