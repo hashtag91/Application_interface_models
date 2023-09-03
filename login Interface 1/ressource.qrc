@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="Right Pic">
+    <file>Cool.png</file>
+  </qresource>
+  <qresource prefix="icon">
+    <file>ico/mail.svg</file>
+    <file>ico/password.svg</file>
+  </qresource>
+</RCC>
